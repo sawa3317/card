@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box
+}
+body {
+	background-color:  #a2d5c6;
+}
+
+.info {
+	margin: 30px auto;
+	text-align: center;
+	font-size: 40px;
+	position: fixed;
+	top: 30px;
+	left: 100px;
+	
+}
+
+.score {
+	margin: 30px auto;
+	text-align: center;
+	font-size: 40px;
+	height: 50px;
+	position: fixed;
+	top: 80px;
+	left: 80px;
+}
+
+.change-score {
+	position: relative;
+	top: -48px;
+	left: 145px;
+	font-size: 40px;
+	font-weight: bold;
+	
+}
+
+.red {
+	color: rgb(240, 0, 0);
+}
+
+.green {
+	color: rgb(42, 206, 21);
+}
+.field {
+	width: 660px;
+	margin: 50px auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card {
+	cursor: pointer;
+	width: 100px;
+	height: 150px;
+	margin: 5px;
+}
+.back, .front {
+	width: 100px;
+	height: 150px;
+	backface-visibility: hidden;
+	position: absolute;
+    transition: transform .6s linear;
+	border-radius: 5%;
+}
+
+.front{
+    transform: perspective(600px) rotateY(0deg);
+	background-color: #5c3c92;
+}
+
+.back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #d72631;
+	font-size: 80px;
+	text-align: center;
+	padding-top: 30px;
+}
+
+
+.frontY {
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.backY {
+	transform: perspective(600px) rotateY(0deg);
+}
+
+.new-game {
+	width: 150px;
+	height: 70px;
+	margin: 200px auto;
+	border-radius: 30%;
+	background-color: rgba(194, 59, 59, 0.8);
+	cursor: pointer;
+}
+
+.new-game:hover {
+	background-color: rgb(194, 59, 59);
+}
+.new-game:active {
+	background-color: rgb(58, 218, 93);
+}
+
+
+@media (max-width: 1260px) {
+	
+	.info, .score {
+		position:static;
+		
+	}
+}
+
+
+/* .card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+} */
